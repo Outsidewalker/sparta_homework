@@ -30,16 +30,42 @@
       margin: 10px auto 10px auto;
       width: 90px;
     } 
-     .font {
+    .font {
       font-size: 2.3em;
       font-weight: bold;
     }  
 
   </style>
   <script type="text/javascript">
-    function hey(){
-      alert('안팔앙~~~!!!!!')
+    function war01(){
+      let name1 = $('#name1').val();
+      let num1 = $('#inputGroupSelect01').val();
+      let phone1 = $('#phone1').val();
+      let add1 = $('#add1').val();
+      if(name1 == ""){
+        alert('이름을 입력해주세요.');
+        $("#name1:input:text:first").focus();
+      }
+      else if(num1 == "---수량을 선택하세요(최소수량 100ea)---"){
+        alert('수량을 입력해주세요 .');
+        $("#inputGroupSelect01").focus();
+      }
+     else if(phone1 == ""){
+        alert('전화번호를 입력해주세요.');
+        $("#phone1:input:text:first").focus();
+      }
+          else if(add1 == ""){
+        alert('주소를 입력해주세요.');
+        $("#add1:input:text:first").focus();
+      }
+      else{
+        alert('입력완료');
+      }
+
     }
+
+    
+    
   </script>
 </head>
 <body>
@@ -86,24 +112,24 @@
     <div>
       <span class ="font">생수를 팝니다.</span>
       <Strong>가격: 10,000원/ 1 SET</strong>
-    </div>
-    <ol>
-     <li>기본 네가지 맛의 생수 ~!</li> 
-      <li>추가 구성 6가지 !!</li>
-     <li>해외 유명 생수중 랜덤 1개</li> 
-    </ol>
+      </div>
+      <ol>
+       <li>기본 네가지 맛의 생수 ~!</li> 
+       <li>추가 구성 6가지 !!</li>
+       <li>해외 유명 생수중 랜덤 1개</li> 
+     </ol>
      위 구성의 다양한 맛의 물을 한번에 즐길수 있는 기회 ~~! 내몸에 꼭 필요한 물 다양하게 즐기세요~~ 
-  </div>
+   </div>
 
 
 
 
-  <div class = "input_group">
+   <div class = "input_group">
     <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default">주문자 이름</span>
       </div>
-      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      <input id="name1" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
 
 
@@ -122,21 +148,21 @@
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default">전화번호</span>
       </div>
-      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      <input id="phone1" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
     <div class="input-group input-group-lg">
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-lg">주소</span>
       </div>
-      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+      <input id="add1" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
     </div>
   </div>
 
-<div class = "butt">
-<button onclick="hey()" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
-  주문하기
-</button>
-</div>
+  <div class = "butt">
+    <button onclick="war01()" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+      주문하기
+    </button>
+  </div>
 
 
 
