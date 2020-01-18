@@ -41,6 +41,7 @@
       let name1 = $('#name1').val();
       let num1 = $('#inputGroupSelect01').val();
       let phone1 = $('#phone1').val();
+      let regphone =  /(01[0|1|6|9|7])[-](\d{3}|\d{4})[-](\d{4}$)/g;
       let add1 = $('#add1').val();
       if(name1 == ""){
         alert('이름을 입력해주세요.');
@@ -52,6 +53,10 @@
       }
      else if(phone1 == ""){
         alert('전화번호를 입력해주세요.');
+        $("#phone1:input:text:first").focus();
+      }
+       else if(!regphone.test(phone1)){
+        alert('잘못된 휴대전화 번호입니다.');
         $("#phone1:input:text:first").focus();
       }
           else if(add1 == ""){
